@@ -22,8 +22,14 @@ nmap 6 <C-w>w
 nmap , <C-o>
 nmap . <C-i>
 nmap <Del> <Esc><C-w>c
-nmap <F11> :LHTags "<cword>"<CR>
+nmap <F11> :tj <cword><CR>
 
+"TagFinder https://github.com/AndrewRadev/tagfinder.vim
+runtime plugin/tagfinder.vim
+DefineTagFinder Tjs c,s
+DefineTagFinder Tjv c,v
+DefineTagFinder Tjf c,f
+DefineTagFinder Tjm c,m
 
 " khorser/vim-mark-tools
 nmap r <Plug>ToggleMarkAZ

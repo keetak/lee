@@ -6,7 +6,10 @@
 # sudo dpkg -i ripgrep_12.1.1_amd64.deb
 
 # NVIM_IMG_NAME=nvim_0_5_1.appimage
+rm -rf bundle
+rm -rf vim
 tar xvf bundle.tar
+cat vim.tara* | tar xvf -
 
 # install nvim settings
 # mkdir -p $HOME/.config/nvim/autoload

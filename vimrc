@@ -43,12 +43,12 @@ nmap 3 :Clap grep +no-cache ++query=<cword><CR>
 nmap q :Clap quickfix +no-cache<CR>
 "nmap ` :Clap command_history<CR>
 nmap f :Clap blines +no-cache<CR>
-nmap ' :Clap files ++finder=find +name-only<CR>
+nmap ' :Clap files +no-cache +name-only<CR>
 nmap ; :Clap filer<CR>
 nmap l :Clap git_diff_files<CR>
 nmap j :Clap jumps<CR>
 nmap t <ESC> :delmarks a-z0-9<CR> :Clap marks +no-cache<CR>
-nmap b :Clap buffers<CR>
+nmap b :Clap buffers +no-cache<CR>
 let g:clap_layout = { 'relative': 'editor', 'width': '70%', 'height': '35%', 'row': '10%', 'col': '15%' }
 let g:clap_provider_grep_delay = '500'
 let g:clap_provider_grep_blink = [3, 1000]

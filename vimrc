@@ -9,6 +9,7 @@ set cindent
 set ts=4
 set sw=4
 set sts=4
+set bs=indent,eol,start
 " Theme (https://github.com/tanvirtin/monokai.nvim)
 syntax on
 filetype on

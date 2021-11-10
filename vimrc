@@ -37,9 +37,9 @@ nmap r <Plug>ToggleMarkAZ
 nmap R :delmarks a-zA-Z0-9<CR>
 
 " vim-clap (https://github.com/liuchengxu/vim-clap)
-nmap 1 :Clap grep +no-cache ./
-nmap 2 :Clap grep +no-cache<CR>
-nmap 3 :Clap grep +no-cache ++query=<cword><CR>
+nmap 1 :Clap grep ./
+nmap 2 :Clap grep <CR>
+nmap 3 :Clap grep ++query=<cword><CR>
 nmap q :Clap quickfix +no-cache<CR>
 "nmap ` :Clap command_history<CR>
 nmap f :Clap blines +no-cache<CR>

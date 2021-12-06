@@ -6,6 +6,7 @@ set showmatch
 set ruler
 set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
 set cindent
+set cursorline
 set ts=4
 set sw=4
 set sts=4
@@ -15,6 +16,8 @@ syntax on
 filetype on
 colorscheme molokai
 set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " <Key bindings>
 nmap <C-f> *N

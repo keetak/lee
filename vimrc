@@ -26,7 +26,9 @@ nmap 6 <C-w>w
 nmap , <C-o>
 nmap . <C-i>
 nmap <Del> <Esc><C-w>c
-nmap <F11> :tj <cword><CR>
+nmap <F11> :exe 'tj' expand('<cword>')<CR>
+nmap + <C-w>><C-w>>
+nmap - <c-w><<c-w><
 
 "TagFinder https://github.com/AndrewRadev/tagfinder.vim
 runtime plugin/tagfinder.vim

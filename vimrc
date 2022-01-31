@@ -70,9 +70,8 @@ let g:clap_provider_grep_opts = '-H --vimgrep --smart-case'
 " vim-interstingwords (https://github.com/lfv89/vim-interestingwords)
 let g:interestingWordsDefaultMappings = 0
 nmap <silent> <SPACE> :call InterestingWords('n')<CR>
-nmap <silent> <BS> :call UncolorAllWords()<CR> :noh<CR>
-let g:interestingWordsGUIColors = ['#50fd50', '#dc4343', '#FF7F50', '#00a495', '#a184cb', '#ffa500', '#c9cc8c', '#8bb6cc', '#98ba90', '#FF11FF', '#8D876B', '#ffe4af', '#00FFFF', '#cc8c8c', '#1E90FF', '#dfd4e4']
-
+nmap <silent> <BS> :call UncolorAllWords()<CR>
+let g:interestingWordsGUIColors = ['#E45756', '#F58518', '#F6F926', '#B6E880', '#2ED9FF', '#4C78A8', '#AB63FA', '#FF97FF']
 " Highlight the search results
 hi Search term=reverse ctermfg=7 ctermbg=9 guifg=white guibg=Red
 

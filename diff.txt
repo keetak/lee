@@ -1,0 +1,25 @@
+vim-clap의 preview에서 highlight 문제 경우, 아래 중 ext.vim 수정만으로 해결 됨
+
+--- a/autoload/clap/ext.vim
++++ b/autoload/clap/ext.vim
+@@ -39,7 +39,7 @@ function! clap#ext#into_filetype(fname) abort
+   if !empty(ext) && has_key(s:ext2ft, ext)
+     return s:ext2ft[ext]
+   else
+-    return ''
++    return 'c'
+   endif
+ endfunction
+
+--- a/autoload/clap/impl/on_move.vim
++++ b/autoload/clap/impl/on_move.vim
+@@ -27,8 +27,10 @@ if clap#maple#is_available()
+       endtry
+       if has_key(a:result, 'syntax')
+         call g:clap.preview.set_syntax(a:result.syntax)
++        "call g:clap.preview.set_syntax('c')
+       elseif has_key(a:result, 'fname')
+         call g:clap.preview.set_syntax(clap#ext#into_filetype(a:result.fname))
++        "call g:clap.preview.set_syntax('c')
+       endif
+       call clap#preview#highlight_header()

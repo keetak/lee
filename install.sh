@@ -2,12 +2,14 @@
 
 # install dependnecy for build vim
 sudo apt-get install -y gcc make
+sudo dpkg -i ripgrep_13.0.0_amd64.deb
 
 # unzip and build vim 8.2 source code
 rm -rf vim
 cat vim.tara* | tar xvf -
 cd vim/src
-./configure
+./configure --enable-pythoninterp=yes \
+		  --enable-python3interp=yes
 make -j4
 cd ../..
 

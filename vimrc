@@ -26,26 +26,27 @@ nmap 6 <C-w>w
 nmap , <C-o>
 nmap . <C-i>
 nmap <Del> <Esc><C-w>c
-nmap <F11> :exe 'tj' expand('<cword>')<CR>
+nmap <F9> :exe 'tj' expand('<cword>')<CR>
 nmap + <C-w>><C-w>>
 nmap - <c-w><<c-w><
 
 "TagFinder https://github.com/AndrewRadev/tagfinder.vim
 runtime plugin/tagfinder.vim
+DefineTagFinder Tag
 DefineTagFinder Tjs c,s
-DefineTagFinder Tjv c,v
 DefineTagFinder Tjf c,f
+DefineTagFinder Tjv c,v
 DefineTagFinder Tjm c,m
 
-" khorser/vim-mark-tools
-nmap r <Plug>ToggleMarkAZ
-nmap R :delmarks a-zA-Z0-9<CR>
+nmap <F10> :exe 'Tjs' expand('<cword>')<CR> :copen <CR>
+nmap <F11> :exe 'Tjf' expand('<cword>')<CR> :copen <CR>
+nmap <F12> :exe 'Tjv' expand('<cword>')<CR> :copen <CR>
 
 " vim-clap (https://github.com/liuchengxu/vim-clap)
-nmap 1 :Clap grep ./
-nmap 2 :Clap grep <CR>
-nmap 3 :Clap grep ++query=<cword><CR>
-nmap q :Clap quickfix +no-cache<CR>
+"nmap <F5> :Clap grep <CR>
+nmap <F5> :Clap grep ++query=<cword><CR>
+nmap <F6> :Clap grep ./
+"nmap q :Clap quickfix +no-cache<CR>
 "nmap ` :Clap command_history<CR>
 nmap f :Clap blines +no-cache<CR>
 nmap ' :Clap files +no-cache +name-only<CR>
@@ -53,19 +54,20 @@ nmap ; :Clap filer<CR>
 nmap l :Clap git_diff_files<CR>
 nmap j :Clap jumps<CR>
 nmap t <ESC> :delmarks a-z0-9<CR> :Clap marks +no-cache<CR>
-nmap b :Clap buffers +no-cache<CR>
-let g:clap_layout = { 'relative': 'editor', 'width': '70%', 'height': '35%', 'row': '10%', 'col': '15%' }
-let g:clap_provider_grep_delay = '500'
+nmap <C-b> :Clap buffers +no-cache<CR>
+let g:clap_layout = { 'relative': 'editor', 'width': '50%', 'height': '75%', 'row': '10%', 'col': '3%' }
+let g:clap_provider_grep_delay = '400'
 let g:clap_provider_grep_blink = [3, 1000]
-let g:clap_preview_size = 8
-let g:clap_preview_direction = 'UD'
+let g:clap_preview_size = 6
+"let g:clap_preview_direction = 'UD'
 let g:clap_preview_delay = '150'
 let g:clap_enable_background_shadow = v:false
 let g:clap_insert_mode_only = v:true
-let g:clap_dispatcher_drop_cache = v:false
-let g:clap_provider_grep_executable = 'rg'
-let g:clap_force_matchfuzzy = 'Python'
-let g:clap_provider_grep_opts = '-H --vimgrep --smart-case'
+"let g:clap_dispatcher_drop_cache = v:false
+"let g:clap_provider_grep_executable = 'rg'
+"let g:clap_force_matchfuzzy = 'Python'
+"let g:clap_provider_grep_opts = '-H --vimgrep --smart-case'
+let g:clap_provider_grep_opts = '-H --vimgrep --word-regexp'
 
 " vim-interstingwords (https://github.com/lfv89/vim-interestingwords)
 let g:interestingWordsDefaultMappings = 0

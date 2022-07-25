@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # install dependnecy for build vim
-sudo apt-get install -y gcc make
+sudo apt-get update
+sudo apt-get install -y gcc make libncurses-dev
 sudo dpkg -i ripgrep_13.0.0_amd64.deb
 
 # unzip and build vim 8.2 source code
@@ -22,7 +23,7 @@ rm -rf ~/.vim
 mkdir -p ~/.vim/autoload
 cp pathogen.vim ~/.vim/autoload/pathogen.vim
 cp vimrc $HOME/.vimrc
-cp -r bundle $HOME/.vim/
+cp -r bundle $HOME/.vim/ 1> /dev/null
 ln -s $PWD/vim/src/vim $PWD/vim/src/vi
 
 # install ~/.profile setting
@@ -32,6 +33,7 @@ if [ $? -ne 0 ];then
 	echo ".profile has not been included my_profilerc"
 	echo $STR >> $HOME/.profile
 fi
+
 # install ~/.bashrc setting
 STR='[ -f $HOME/my-settings/my_bashrc ] && . $HOME/my-settings/my_bashrc'
 cat $HOME/.bashrc | grep -F my-settings

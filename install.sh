@@ -26,6 +26,9 @@ cp vimrc $HOME/.vimrc
 cp -r bundle $HOME/.vim/ 1> /dev/null
 ln -s $PWD/vim/src/vim $PWD/vim/src/vi
 
+# install gitconfig
+# cp gitconfig_github ~/.gitconfig
+
 # install ~/.profile setting
 STR='[ -f $HOME/my-settings/my_profilerc ] && . $HOME/my-settings/my_profilerc'
 cat $HOME/.profile | grep -F my-settings

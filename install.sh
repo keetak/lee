@@ -9,6 +9,7 @@ sudo dpkg -i ripgrep_13.0.0_amd64.deb
 rm -rf vim
 cat vim.tara* | tar xvf -
 cd vim/src
+make clean
 ./configure --enable-pythoninterp=yes \
 		  --enable-python3interp=yes
 make -j4

@@ -1,4 +1,4 @@
-execute pathogen#infect()
+execute pathogen#infect('~/my-settings/bundle/{}')
 set nocompatible
 set nu
 set hlsearch
@@ -50,24 +50,25 @@ nmap <F6> :Clap grep ./
 "nmap ` :Clap command_history<CR>
 nmap f :Clap blines +no-cache<CR>
 nmap ' :Clap files +no-cache +name-only<CR>
-nmap ; :Clap filer<CR>
+nmap ; :Clap filer +no-cache ++finder=rg<CR>
 nmap l :Clap git_diff_files<CR>
 nmap j :Clap jumps<CR>
 nmap t <ESC> :delmarks a-z0-9<CR> :Clap marks +no-cache<CR>
 nmap <C-b> :Clap buffers +no-cache<CR>
-let g:clap_layout = { 'relative': 'editor', 'width': '50%', 'height': '75%', 'row': '10%', 'col': '3%' }
-let g:clap_provider_grep_delay = '400'
-let g:clap_provider_grep_blink = [3, 1000]
-let g:clap_preview_size = 6
+"let g:clap_layout = { 'relative': 'editor', 'width': '50%', 'height': '75%', 'row': '10%', 'col': '3%' }
+
+"let g:clap_provider_grep_delay = '400'
+"let g:clap_provider_grep_blink = [3, 1000]
+"let g:clap_preview_size = 6
 "let g:clap_preview_direction = 'UD'
-let g:clap_preview_delay = '150'
-let g:clap_enable_background_shadow = v:false
-let g:clap_insert_mode_only = v:true
+"let g:clap_preview_delay = '150'
+" let g:clap_enable_background_shadow = v:false
+" let g:clap_insert_mode_only = v:true
 "let g:clap_dispatcher_drop_cache = v:false
 "let g:clap_provider_grep_executable = 'rg'
 "let g:clap_force_matchfuzzy = 'Python'
 "let g:clap_provider_grep_opts = '-H --vimgrep --smart-case'
-let g:clap_provider_grep_opts = '-H --vimgrep --word-regexp'
+" let g:clap_provider_grep_opts = '-H --vimgrep --word-regexp'
 
 " vim-interstingwords (https://github.com/lfv89/vim-interestingwords)
 let g:interestingWordsDefaultMappings = 0

@@ -1,0 +1,2 @@
+PATH="$HOME/my-settings/vim_x64_static/bin:$PATH"
+export VIMRUNTIME=$HOME/my-settings/vim_x64_static/share/vim/vim82

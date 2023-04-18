@@ -1,2 +1,0 @@
-PATH="$HOME/my-settings/vim/src:$PATH"
-export VIMRUNTIME=$HOME/my-settings/vim/runtime

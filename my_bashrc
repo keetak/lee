@@ -1,6 +1,3 @@
-PATH=$HOME/my-settings/vim/src:$PATH
-VIMRUNTIME=$HOME/my-settings/vim/runtime
-
 alias gs='git status'
 alias gb='git branch'
 alias gck='git checkout'

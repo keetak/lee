@@ -3,7 +3,7 @@ BIN=$PWD/vim_x64_static/bin
 VIMRUNTIME=$PWD/vim_x64_static/share/vim/vim82
 AUTOLOAD=$HOME/.vim/autoload
 
-INSTALL_RIPGREP=1
+INSTALL_RIPGREP=0
 INSTALL_VIM_BUNDLE=1
 INSTALL_VIM_SETTINGS=1
 OVERWIRTE_GITCONFIG=0
@@ -25,8 +25,7 @@ fi
 if [ $INSTALL_VIM_SETTINGS -eq 1 ]
 then
 	rm -rf $HOME/.vim; # mkdir -p $AUTOLOAD
-# sudo cp pathogen.vim $AUTOLOAD/pathogen.vim
-	sudo cp pathogen.vim $VIMRUNTIME/autoload
+	cp pathogen.vim $VIMRUNTIME/autoload
 	cp vimrc $HOME/.vimrc
 	rm -f $BIN/vi; ln -s $BIN/vim $BIN/vi
 fi
